@@ -1,0 +1,23 @@
+Set theoretical file comparison and manipulation
+
+I frequently want to do set theory things with the lines in a
+file. For example, I might have a set of files each containing a list
+of installed packages on a machine, and I want to know things: 1) what
+packages are installed on all systems (set intersection), 2) what is
+the list of all installed packages (set union), 3) what packages are
+only installed on machine A (set difference), 4) etc… These tools
+facilitate such computations (see the script documentation for more
+examples).
+
+ - =lineSetOp.rb= ::
+   A ruby script that can do many different kinds of set theory
+   computations. Each "set" is defined by a file with the set
+   elements being each line of the file. 
+ - =lineMapDiff.rb= ::
+   A ruby script similar to =lineSetOp.rb= but it operates on maps
+   (ordered pairs) instead of sets, and only preforms a kind of set
+   difference.
+ - =uniq.rb= :: 
+   A "stable" version of the UNIX command =uniq= that doesn't require
+   a file to be sorted to work.  It spits out the first occurrence of
+   each line.
